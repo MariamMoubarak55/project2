@@ -1,0 +1,426 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(245, 239, 218);
+    height: 2950px;
+    font-family: "pt-sans",sans-serif;
+
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 90%;
+    margin: auto
+}
+header {
+    padding: 35px 0;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content img{
+flex: 1;
+max-width: 150px;
+}
+.content nav{
+flex:3;
+text-align: center;
+font-size: 16px;
+}
+.content  .icons{
+flex:1;
+text-align: right;
+}
+.content ul li {
+    display: inline-block;
+}
+.content ul li a{
+    color:#762121;
+}
+.content nav ul li .fur {
+    position: relative;
+    padding: 10px 19px;
+    display: block;
+    font-weight: bold;
+}
+.content nav ul li .fur:before,
+.content nav ul li .fur:after{
+content:"";
+position: absolute;
+border-style: solid; 
+left: 0;
+top:0; 
+transition: transform 0.3s;
+}
+.content nav ul li .fur:before{
+    border-width: 0 2px;
+    height: 100%; 
+    width: 95%;
+    transform: scale3d(1,0,1);
+}
+.content nav ul li .fur:hover:before{
+ transform: scale3d(1,1,1);
+}
+.content nav ul li .fur:after{
+border-width: 2px 0;
+height: 91%; 
+width: 98%;
+transform: scale3d(0,1,1);
+transform-origin: left;
+}
+.content nav ul li .fur:hover:after{
+ transform: scale3d(1,1,1);
+ transition-delay: .3s;
+}
+.content .icons ul li  {
+    padding: 10px ;
+    font-weight: bold;
+}
+.content .icons ul .xx {
+ position: relative;
+ margin-right: 11px;
+}
+.content .icons ul .xx::after{
+    position: absolute;
+    content: "0";
+    background-color: #762121;
+    color: #fff;
+    border-radius: 50%;
+    padding: 4px;
+    font-size: 13px;
+    bottom: -4px;
+}
+/*.................................................................................................... */
+.table{
+position: relative;
+}
+.table-rows{
+    position: absolute;
+    width: 450px;
+    border: 2px solid #762121;
+    background-color: #fff;
+    padding: 16px;
+    margin-top: 4px;
+    transform: scale(0);
+    transition: transform 0.5s , visibility .4s;
+    opacity: 0;
+    visibility: hidden;
+}
+.table:hover .table-rows{
+    transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+}
+.table-rows ul{
+    display: table-cell;
+    text-align: left;
+}
+.table-rows ul .a {
+    display: block;
+    border-bottom: 1px dotted #762121;
+    margin-bottom: 12px;
+}
+.table-rows ul li {
+    line-height: 1.6;
+}
+.font img{
+    width: 90%;
+    height: 460px;
+    margin-left: 66px;
+}
+/*.................................................................................................... */
+.category {
+    padding: 35px 0;
+}
+.types{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: auto;
+}
+.address {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.title{
+    font-size:28px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.address .line{
+    display: block;
+    width: 100px;
+    margin: auto;
+    height: 3px;
+    background-color: #762121;
+    transition: width .5s;
+}
+.address:hover .line{
+    width: 150px;
+}
+.types img{
+    width: 300px;
+    margin-bottom: 25px;
+}
+
+.mmm{
+   color: gray;
+   font-weight: normal;
+   font-size: 16px;
+}
+.nnn {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.type {
+    position: relative;
+}
+.type .icon{
+    width: 30px;
+    height: 30px;
+    background-color: brown;
+    color: #fff;
+    text-align: center;
+    display: block;
+    line-height: 30px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.1;
+}
+.type:hover .icon{
+    visibility: visible;
+    opacity: 1;
+}
+.www{
+    height: 40px;
+}
+/*................................................................................................... */
+.discount {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    margin: auto;
+}
+.dis{
+    flex:2;
+    background: #f7f3ef;
+    padding: 20px;
+    position: relative;
+}
+.tit{
+    font-size: 25px;
+    font-weight: bold;
+}
+.marketing{
+    font-size: 17px;
+}
+.lll{
+    font-size: 16px;
+}
+.des,.dess {
+    flex: 1;
+    height: 300px;
+    position: relative;
+}
+.int{
+    position: absolute;
+    top:20px;
+    left: 15px;
+}
+.int h3{
+    font-weight: normal;
+    color: #762121;
+}
+.int h2{
+    font-size: 20px;
+}
+
+.des{
+    background-image: url(../imgs/ب3.webp);
+    background-size: cover;
+    margin:0 20px;
+    transition: transform 0.5s;
+}
+.des:hover{
+    transform: scale(1.1);
+}
+.dis .pen{
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 20px;
+}
+.dis .pen .icon{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-size: 50px;
+    color: #762121;
+}
+.dis .pen +p{
+    line-height: 1.7;
+}
+.dis .lines span{
+     display: inline-block;
+     width:50px;
+     height: 2px;
+     background-color: #762121;
+     margin-left: 10px;
+}
+.dis .lines{
+    text-align: right;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+.dess{
+    background-image: url(../imgs/ب1.jpeg);
+    background-size: cover; 
+    transition: transform .5s;
+}
+.dess:hover{
+    transform: scale(1.1);
+}
+.ss{
+    width: 90%;
+    margin: auto;
+}
+.free {
+    display:flex;
+    margin-bottom: 55px;
+}
+.item{
+    flex:1;
+    text-align: center;
+    border-right: 1px solid #762121;
+}
+.mn{
+    border:0;
+}
+.info h3{
+    font-size: 17px;
+}
+.info span{
+    color: gray;
+    font-size: 15px;
+}
+.free-icon{
+    background-image: url(../imgs/service-icon.png);
+    height: 55px;
+    background-repeat: no-repeat;
+}
+.icon1{
+background-position: center 5px;
+transition: all .5s;
+}
+.item:hover .icon1{
+    background-position: center -86px;
+}
+.icon2{
+background-position: center -180px;
+transition: all .5s;
+}
+.item:hover .icon2{
+    background-position: center -273px;
+}
+.icon3{
+background-position: center -366px;
+transition: all .5s;
+}
+.item:hover .icon3{
+    background-position: center -455px;
+}
+.icon4{
+background-position: center -549px;
+transition: all .5s;
+ }
+ .item:hover .icon4{
+    background-position: center -639px;
+}
+.icon5{
+background-position: center -734px;
+transition: all .5s;
+}
+.item:hover .icon5{
+    background-position: center -826px;
+}
+
+/*.................................................................................................. */
+.container{
+    margin: auto;
+}
+.product{
+    margin: auto;
+    padding: 40px 60px;
+}
+.xxxx{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.xxxx li{
+    margin: 10px 20px;
+    font-size: 20px;
+}
+.products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:45px;
+}
+.product-img{
+ position: relative;
+}
+.product-back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform:scalex(0);
+    opacity: 0.9;
+    transition: transform 0.2s;
+}
+.product-back ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.product-back ul li{
+    width: 36px;
+    height: 40px;
+    background-color: #762121;
+    display: inline-block;
+    text-align: center;
+}
+.product-back ul li i{
+    color: #fff;
+    line-height: 40px;
+}
+.product-content:hover .product-back{
+    transform: scalex(1);
+}
+.product-content i.col{
+    color: rgb(244, 130, 141);
+}
+.stars span{
+    display: block;
+    margin: 5px 0;
+}
+.stars i{
+    margin-top: 10px;
+}
